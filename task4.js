@@ -1,10 +1,23 @@
-// Родительская функция "Электро приборы"
+// Родительская функция "Электроприборы"
 function ElectroDevices(name, color, power) {
     this.name = name;
     this.color = color;
     this.power = power;
     this.isPlugged = false;
 }
+
+// Функция для приборов у которых есть экран
+function Screen(name, color, power) {
+    this.name = name;
+    this.color = color;
+    this.power = power;
+    this.isPlugged = false;
+    this.isScreen = true;
+}
+
+// Прототипом этой функции является функция "Электроприборы"
+Screen.prototype = new ElectroDevices();
+
 
 // Переменная для потребляемой энергии
 let allPower = 0;
@@ -28,10 +41,10 @@ ElectroDevices.prototype.turnOff = function (){
     console.log(`${this.name} выключили из розетки`);
 }
 
-// Создание экземпляры
-const notebook = new ElectroDevices("notebook", "black", 100, );
-const lamp = new ElectroDevices("lamp", "yellow", 20, );
-const TV = new ElectroDevices("TV", "gray", 80, );
+// Создание экземпляров
+const notebook = new Screen("notebook", "black", 100);
+const lamp = new ElectroDevices("lamp", "yellow", 20);
+const TV = new Screen("TV", "gray", 80);
 const battery = new ElectroDevices("battery", "white", 30);
 
 // Включение/выключение прибора в розетку/из розетки
