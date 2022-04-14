@@ -51,9 +51,9 @@ let allPower = 0;
 
 
 // Создание экземпляров
-const notebook = new Screen("notebook", "black", 100, );
-const lamp = new ElectroDevices("lamp", "yellow", 20, );
-const TV = new Screen("TV", "gray", 80, );
+const notebook = new Screen("notebook", "black", 100);
+const lamp = new ElectroDevices("lamp", "yellow", 20);
+const TV = new Screen("TV", "gray", 80);
 const battery = new ElectroDevices("battery", "white", 30);
 
 // Включение/выключение прибора в розетку/из розетки
